@@ -48,3 +48,7 @@ The included assembly program demonstrates:
 5. **Unconditional jump** (`JAL`)
 6. **System call output** (`ECALL`)
 
+## Waveform Output
+Below is the GTKWave output for the simulation of the `test.s` program:
+
+<img width="1197" height="569" alt="image" src="https://github.com/user-attachments/assets/7c4aaf73-1547-4f80-9f16-76db71e48b9a" />
