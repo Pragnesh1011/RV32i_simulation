@@ -78,5 +78,3 @@ The simulation generates a waveform file (`wave.vcd`) viewable with [GTKWave](ht
 - Follow the PC value to track program execution flow.
 
 Viewing and understanding these waveforms will help you verify instruction execution and debug your CPU design.
-
-
