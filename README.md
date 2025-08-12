@@ -52,3 +52,31 @@ The included assembly program demonstrates:
 Below is the GTKWave output for the simulation of the `test.s` program:
 
 <img width="1197" height="569" alt="image" src="https://github.com/user-attachments/assets/7c4aaf73-1547-4f80-9f16-76db71e48b9a" />
+
+## Understanding the Waveform Output
+
+The simulation generates a waveform file (`wave.vcd`) viewable with [GTKWave](http://gtkwave.sourceforge.net/). This waveform shows how the CPU executes instructions cycle-by-cycle.
+
+### Key Signals Displayed
+- **`pc`**: Program Counter, increments by 4 each instruction fetch.
+- **`regs[5]` to `regs[13]`**: Register values used in the test program.
+- **Instruction memory (`mem`)**: Holds the current instruction fetched.
+- **Clock (`clk`)**: Drives the CPU cycles.
+
+### Interpreting the Waveform for an Instruction
+1. At each rising clock edge, the PC updates to fetch the next instruction.
+2. Register values change on the clock edge following instruction execution.
+3. For example, during the execution of `add x7, x5, x6`:
+   - PC increments by 4.
+   - Register `x7` updates to the sum of `x5` and `x6`.
+4. Memory read and write operations appear as changes in `mem` values at addresses corresponding to the effective memory access.
+
+### Navigation Tips
+- Use the **Zoom** tool to focus on specific clock cycles.
+- The **Search** bar lets you find signal names quickly.
+- Toggle signals ON/OFF to reduce clutter.
+- Follow the PC value to track program execution flow.
+
+Viewing and understanding these waveforms will help you verify instruction execution and debug your CPU design.
+
+
